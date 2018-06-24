@@ -50,7 +50,13 @@
           </div>
         </div>
       </div>
-        <el-button type="danger" size="small" @click="deleteOrder">删除订单</el-button>
+      <div id="line_query_2">
+      </div>
+      <div id="query_but">
+        <el-button  @click="deleteOrder">删除订单</el-button>
+        
+      </div>
+      <div id="line_query_3"></div>
     </section>
     <br/>
   </section>
@@ -148,14 +154,35 @@ export default {
     height: 50px;
     width: 50px;
   }
+  #line_query_3 {
+    margin-top:-15px;
+    margin-left: 1380px;
+    width:30%;
+    height:3px;
+    background:rgb(051, 069, 091);
+  }
+  #line_query_2 {
+    margin-top:300px;
+    margin-left: 200px;
+    width:30%;
+    height:3px;
+    background:rgb(051, 069, 091);
+  }
   #line_query {
     margin-top:80px;
     margin-left: 200px;
     width:80%;
-    height:3px;
+    height:2px;
     background:rgb(051, 069, 091);
   }
-
+  #query_but {
+    margin-top: -20px;
+    margin-left: 1050px;
+    background-color:rgb(051, 069, 091);
+    width: 200px;
+    height: 35px;
+    box-shadow: #666 0px 0px 10px;
+  }
   #ellipse_query {
     box-shadow: #666 0px 0px 10px;
     width: 150px;
