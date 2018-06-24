@@ -17,8 +17,8 @@
     </div>
     <span id="amount">总计 ¥ {{items[0].isChosen * items[0].price + items[1].isChosen * items[1].price + items[2].isChosen * items[2].price + items[3].isChosen * items[3].price + items[4].isChosen * items[4].price + items[5].isChosen * items[5].price + items[6].isChosen * items[6].price +　items[7].isChosen * items[7].price + items[8].isChosen * items[8].price + items[9].isChosen * items[9].price + items[10].isChosen * items[10].price + items[11].isChosen * items[11].price}}</span>
     <div>
-      <button type="button" id = "tableButton1" v-on:click="postData">确认订单</button>
-      <button type="button" id = "tableButton2" v-on:click="reset">重置订单</button>
+      <button type="button" id = "foodButton1" v-on:click="postData">确认订单</button>
+      <button type="button" id = "foodButton2" v-on:click="reset">重置订单</button>
     </div>
   </div>
 </template>
@@ -224,7 +224,7 @@ export default {
   margin-bottom: 6%;
   margin-right: 5%;
 }
-#tableButton1 {
+#foodButton1 {
     background-color:rgb(051, 069, 091);
     border: none;
     color: white;
@@ -239,7 +239,7 @@ export default {
     box-shadow: #666 0px 0px 5px;
     margin-top: 15px;
   }
-  #tableButton2 {
+  #foodButton2 {
     background-color:rgb(051, 069, 091);
     border: none;
     color: white;
