@@ -16,7 +16,7 @@
           </el-form-item>
           <el-form-item>
               <el-button type="primary" @click="login">管理员登录</el-button>
-              <el-button @click="resetForm">取消</el-button>
+              <el-button @click="cancel">取消</el-button>
           </el-form-item>
         </el-form>
       </el-col>
@@ -81,9 +81,9 @@
           }
         });
       },
-      // 表单重置
-      resetForm(){
-        this.$refs['formLogin'].resetFields();
+
+      cancel(){
+        this.$router.push('/');
       }
     }
   }
