@@ -33,7 +33,9 @@
       let checkUserName = (rule,value,cb)=>{
         if(!value){
           return cb(new Error('账户不能为空!'))
-        }else{
+        } else if (!/^[0-9]{11}$/.test(value)) {
+          return cb(new Error('请输入11位手机号码!'))
+        } else {
           cb(); // 将判断传递给后面
         }
 
