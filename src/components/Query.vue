@@ -122,15 +122,16 @@ export default {
     margin-left: 200px;
     width:80%;
     height:3px;
-    background:rgb(000, 188, 212);
+    background:rgb(051, 069, 091);
   }
 
   #ellipse_query {
+    box-shadow: #666 0px 0px 10px;
     width: 150px;
     height: 150px;
     margin-top: 30px;
     margin-left: 150px;
-    border: 4px solid rgb(000, 188, 212);
+    border: 4px solid rgb(051, 069, 091);
     border-radius: 50%;
   }
 
@@ -152,12 +153,14 @@ export default {
     margin-left: 450px;
     height: 40px;
     width: 60%;
-    color: rgb(000, 188, 212);
+    color: rgb(051, 069, 091);
     font-size: 40px;
     font-family: Roboto;
     margin-top: 30px;
   }
   #table_type_query {
+    background-image: url('../assets/bg3.jpeg');
+    background-size:cover;
     margin-top: 40px;
     margin-left: 100px;
     background-color: white;
@@ -165,9 +168,10 @@ export default {
     height: 600px;
     width: 20%;
     box-shadow: #666 0px 0px 10px;
-    border:  3px solid rgb(000, 188, 212);
+    border:  3px solid rgb(051, 069, 091);
   }
   #tableInfo {
+    background-image: url('../assets/bg1.png');
     margin-top: 40px;
     margin-left: 350px;
     background-color: white;
@@ -175,9 +179,10 @@ export default {
     height: 600px;
     width: 20%;
     box-shadow: #666 0px 0px 10px;
-    border:  3px solid rgb(000, 188, 212);
+    border:  3px solid rgb(051, 069, 091);
   }
   #table_food_query {
+    background-image: url('../assets/bg2.jpeg');
     margin-top: 40px;
     margin-left: 100px;
     background-color: white;
@@ -185,13 +190,14 @@ export default {
     height: 600px;
     width: 20%;
     box-shadow: #666 0px 0px 10px;
-    border:  3px solid rgb(000, 188, 212);
+    border:  3px solid rgb(051, 069, 091);
   }
   #deleteIcon{
     width: 30px;
   }
   #tableMem {
-    color: rgb(000, 188, 212);
+    text-shadow: #666 0px 0px 10px;
+    color: rgb(051, 069, 091);
     font-size: 35px;
     font-family: Roboto;
     margin-top: 50px;
@@ -199,7 +205,8 @@ export default {
     text-decoration: underline;
   }
   #tableId{
-    color: rgb(000, 188, 212);
+    text-shadow: #666 0px 0px 10px;
+    color: rgb(051, 069, 091);
     font-size: 35px;
     font-family: Roboto;
     margin-top: 100px;
@@ -207,7 +214,8 @@ export default {
     text-decoration: underline;
   }
   #tableTime {
-    color: rgb(000, 188, 212);
+    text-shadow: #666 0px 0px 10px;
+    color: rgb(051, 069, 091);
     font-size: 35px;
     font-family: Roboto;
     margin-top: 50px;
@@ -215,7 +223,7 @@ export default {
     text-decoration: underline;
   }
   #tablePhone {
-    color: rgb(000, 188, 212);
+    color: rgb(051, 069, 091);
     font-size: 35px;
     font-family: Roboto;
     margin-top: 50px;
@@ -223,21 +231,24 @@ export default {
     text-decoration: underline;
   }
   #foodInfo {
+    text-shadow: #666 0px 0px 10px;
+    text-decoration: underline;
     float:left;
     margin-top: 40px;
     margin-left: -15px;
     height: 500px;
     width: 100%;
-    color:rgb(000, 188, 212);
+    color:rgb(051, 069, 091);
     font-family: Roboto;
   }
   .foodList {
+    box-shadow: #666 0px 0px 10px;
     font-size: 25px;
     margin-left: 85px;
     width: 70%;
     height: 300px;
     /*box-shadow: #666 0px 0px 5px;*/
-    border:  3px solid rgb(000, 188, 212);
+    border:  3px solid rgb(051, 069, 091);
   }
 
 </style>

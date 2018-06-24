@@ -6,7 +6,7 @@
     <div>
         <top></top>
     </div>
-
+    <div id="top_image"></div>
     <div id="time">
        <p id="timeTitle">时间</p>
        <img id="calendarIcon" src="../assets/icon/calendar.png" hspace = "5" />
@@ -126,6 +126,11 @@ export default {
     height: 400px;
     /* border: 1px solid blue; */
   }
+  #top_image {
+    background-image: url('../assets/bg3.jpeg');
+    background-size:cover;
+    height: 250px;
+  }
   #space {
      margin-top:10px;
     float: right;
@@ -134,6 +139,7 @@ export default {
     /* border: 2px solid rgb(110, 86, 7); */
   }
   #table {
+    border: 1px solid rgb(051, 069, 091);
     margin-top:10px;
     float: right;
     height: 400px;
@@ -149,7 +155,7 @@ export default {
     margin-left:100px;
     height: 250px;
     width: 20%;
-    border: 1px solid rgb(110, 86, 7);
+    border: 1px solid rgb(051, 069, 091);
     background-color: rgb(252, 252, 252);
     border-radius: 8px;
     -moz-box-shadow: #666 0px 0px 10px;
@@ -161,7 +167,7 @@ export default {
     margin-left:100px;
     height: 250px;
     width: 20%;
-    border: 1px solid rgb(110, 86, 7);
+    border: 1px solid rgb(051, 069, 091);
     background-color: rgb(252, 252, 252);
     border-radius: 8px;
     -moz-box-shadow: #666 0px 0px 10px;
@@ -173,13 +179,14 @@ export default {
     margin-left:100px;
     height: 250px;
     width: 20%;
-    border: 1px solid rgb(110, 86, 7);
+    border: 1px solid rgb(051, 069, 091);
     background-color: rgb(252, 252, 252);
     border-radius: 8px;
     -moz-box-shadow: #666 0px 0px 10px;
     box-shadow: #666 0px 0px 10px;
   }
   #time {
+    border: 1px solid rgb(051, 069, 091);
     margin-top:10px;
     float: left;
     height: 400px;
@@ -208,7 +215,7 @@ export default {
   width: 96%;
 }
   #tableButton1 {
-    background-color:rgb(000, 188, 212);
+    background-color:rgb(051, 069, 091);
     border: none;
     color: white;
     padding: 8px 32px;
@@ -223,7 +230,7 @@ export default {
     box-shadow: #666 0px 0px 10px;
   }
   #tableButton2 {
-    background-color:rgb(000, 188, 212);
+    background-color:rgb(051, 069, 091);
     border: none;
     color: white;
     padding: 8px 32px;

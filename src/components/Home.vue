@@ -3,7 +3,7 @@
 <template>
     <div id="homePage" v-show="showHome">
         <el-menu theme="dark" :default-active="activeIndex" class="el-menu-home" mode="horizontal">
-            <el-menu-item index="1"><router-link to="/">主页</router-link></el-menu-item>
+            <el-menu-item index="1"><router-link to="/"><p id="topInfo_home">主页</p></router-link></el-menu-item>
             <el-menu-item index="2" :style="{float: 'right'}">
                 <router-link v-show="!user.phone" to="/">登录</router-link>
                 <el-dropdown @command="loginOut">
@@ -185,9 +185,11 @@
         padding-bottom: 30px;
     }
     #topInfo_home {
-        background-color: rgb(000, 188, 212);
-        height:130px;
-        box-shadow: #666 0px 0px 5px
+        color:white;
+        font-size:150%;
+        margin-top: 10px;
+        width:80%;
+        height:80%;
     }
     #h1_home {
         color:white;
@@ -262,8 +264,8 @@
         margin-top:0.5%;
         width:100%;
         height:1%;
-        border:solid 2px #05728a;
-        background:#05728a;
+        border:solid 2px  rgb(051, 069, 091);
+        background: rgb(051, 069, 091);
     }
     #photo-list_home {
         margin-left: 58px;
@@ -283,14 +285,13 @@
         padding-top: 50px;
         width: 40px;
         height:90px;
-
     }
     #left_home {
         float: left;
         padding-left:2px;
     }
     #right_home {
-        margin-top: -170px;
+        margin-top: -180px;
         float: right;
     }
     .pic_home {
@@ -304,15 +305,22 @@
     }
 
     #menu_home {
-        height: 300px;
+        background-image: url('../assets/bg1.png');
+        background-size:cover;
+        height: 450px;
         box-shadow: #666 0px 0px 10px;
     }
-    #homePage, #homeBottom{
-      height: 90px;
-      background-color: rgb(000, 188, 212);
+    #homePage {
+      height: 100px;
+      background-color: rgb(051, 069, 091);
+    }
+    #homeBottom{
+      background-size:cover;
+      height: 100px;
+      background-color: rgb(051, 069, 091);
     }
     #homeBottom {
-        background-color:rgb(000, 188, 255);
+        background-color:rgb(051, 069, 091);
     }
     .homeBottomInfo {
         float:left;
@@ -326,12 +334,13 @@
         float: left;
     }
     .ellipse_home {
+        box-shadow: #666 0px 0px 10px;        
         width: 80%;
         height: 250%;
-        margin-top: 0%;
+        margin-top: 15%;
         margin-bottom: 16px;
         margin-left: 7.5%;
-        border: 4px solid #05728a;
+        border: 4px solid rgb(051, 069, 091);
         border-radius: 50%;
 
     }
@@ -343,7 +352,7 @@
         vertical-align: center;
     }
     #menu__home {
-        background-color:rgb(000, 188, 212);
+        background-color:rgb(051, 069, 091);
         color:white;
         border-radius: 10px;
         width: 70%;
@@ -352,7 +361,7 @@
         margin-left:8%;
     }
     #btn_home {
-        background-color:rgb(000, 188, 255);
+        background-color:rgb(051, 069, 091);
         color:white;
         border-radius: 10px;
         width: 70%;

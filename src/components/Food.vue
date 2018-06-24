@@ -3,6 +3,7 @@
     <el-menu theme="dark" :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
       <el-menu-item index="1"><router-link to="/home">主页</router-link></el-menu-item>
     </el-menu>
+    <div id="top_image_food"></div>
     <div id="dishes">
       <div class="dish" v-for="item in items" v-bind:key="item.foodId">
         <img class="picture" :src="item.image"/>
@@ -102,6 +103,11 @@ export default {
 #container .el-menu-demo {
   margin-bottom: 15px;
 }
+#top_image_food {
+    background-image: url('../assets/bg5.jpg');
+    background-size:cover;
+    height: 280px;
+  }
 #sidebar {
   float: left;
   height: 400px;
@@ -187,6 +193,7 @@ export default {
   margin-top: 0.5%;
   margin-bottom: 0.5%;
   box-shadow: #666 0px 0px 10px;
+  border: 1px solid rgb(051, 069, 091);
 }
 .iteminfo {
   width: 98%;
@@ -218,7 +225,7 @@ export default {
   margin-right: 5%;
 }
 #tableButton1 {
-    background-color:rgb(000, 188, 212);
+    background-color:rgb(051, 069, 091);
     border: none;
     color: white;
     padding: 8px 32px;
@@ -233,7 +240,7 @@ export default {
     margin-top: 15px;
   }
   #tableButton2 {
-    background-color:rgb(000, 188, 212);
+    background-color:rgb(051, 069, 091);
     border: none;
     color: white;
     padding: 8px 32px;
