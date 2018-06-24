@@ -1,5 +1,8 @@
 <template>
   <section class="container"> <!-- 最外层容器 -->
+    <el-menu theme="dark" :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
+      <el-menu-item index="1"><router-link to="/home">主页</router-link></el-menu-item>
+    </el-menu>
     <div>
         <div id= "space"></div>
        
