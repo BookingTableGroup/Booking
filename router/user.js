@@ -108,14 +108,25 @@ router.get("/user/:id", (req, res) => {
 
 // 添加一个用户信息路由
 router.post("/user", (req, res) => {
-  //使用User model上的create方法储存数据
-  User.create(req.body, (err, user) => {
-    if (err) {
-      res.json(err);
-    } else {
-      res.json(user);
-    }
-  });
+  User.findOne({
+    phone: req.body.phone
+    })
+    .then(user => {
+      if (user) {
+        res.json({
+          success: false,
+          error: '该账户已注册'
+        })
+      } else {
+        User.create(req.body, (err, user) => {
+          if (err) {
+            res.json(err);
+          } else {
+            res.json(user);
+          }
+        });
+      }
+    })
 });
 
 //更新一条用户信息数据路由

@@ -1,6 +1,9 @@
 <template lang="html">
 
   <div class="list">
+    <el-menu theme="dark" :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
+      <el-menu-item index="1"><router-link to="/">返回登录界面</router-link></el-menu-item>
+    </el-menu>
       <el-table
     :data="tableData"
     stripe
@@ -175,8 +178,8 @@ export default {
       var addObj = this.addForm;
 
       this.$http.post("/api/user", addObj).then(
-        function(response) {
-          if (response.ok) {
+        function(res) {
+          if (!res.data.error) {
             this.$message({
               message: "添加成功",
               type: "success",
@@ -184,10 +187,12 @@ export default {
                 that.getAll();
               }
             });
+          } else {
+            this.$message({
+              message: "添加失败",
+              type: "error"
+            })
           }
-        },
-        function() {
-          // this.loading = false;
         }
       );
     },
