@@ -3,7 +3,7 @@
 <template>
     <div id="homePage" v-show="showHome">
         <el-menu theme="dark" :default-active="activeIndex" class="el-menu-home" mode="horizontal">
-            <el-menu-item index="1"><router-link to="/"><p id="topInfo_home">主页</p></router-link></el-menu-item>
+            <el-menu-item index="1"><router-link to="/home"><p id="topInfo_home">主页</p></router-link></el-menu-item>
             <el-menu-item index="2" :style="{float: 'right'}">
                 <router-link v-show="!user.phone" to="/">登录</router-link>
                 <el-dropdown @command="loginOut">
