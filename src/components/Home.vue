@@ -42,15 +42,9 @@
 
             <div class="selection_home">
                 <div class="ellipse_home">
-                    <img src="../assets/table.png">
-                </div>
-                <button v-text="bookTable" id="btn_home" @click="goBook"></button>
-            </div>
-            <div class="selection_home">
-                <div class="ellipse_home">
                     <img src="../assets/food.png">
                 </div>
-                <button v-text="bookFood" id="btn_home" @click="goFood"></button>
+                <button v-text="bookTable" id="btn_home" @click="goBook"></button>
             </div>
         </div>
         <br/>
@@ -91,7 +85,7 @@
         manager: '经理：XXX',
         tel: '客服：1234567890',
         query: '查看订单',
-        bookTable: '预订餐桌',
+        bookTable: '预订',
         bookFood: '预订菜品',
         phone: '',
         password: '',
@@ -335,18 +329,17 @@
     }
     .ellipse_home {
         box-shadow: #666 0px 0px 10px;        
-        width: 80%;
-        height: 250%;
-        margin-top: 15%;
+        width: 250px;
+        height: 250px;
+        margin-top: 5px;
         margin-bottom: 16px;
-        margin-left: 7.5%;
+        margin-left: 500px;
         border: 4px solid rgb(051, 069, 091);
         border-radius: 50%;
-
     }
     .ellipse_home img {
         width: 80%;
-        margin-left: 9%;
+        margin-left: 9px;
         margin-top:16px;
         height:80%;
         vertical-align: center;
@@ -367,6 +360,7 @@
         width: 70%;
         height:70%;
         font-size:18px;
+        margin-left: 430px;
     }
     #homeBottom .homeBottomInfo img {
       width: 40px;
