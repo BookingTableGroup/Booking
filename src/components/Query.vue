@@ -37,12 +37,8 @@
           <div id="foodInfo">
             <div class="foodList">
               <el-table :data="tableData.foods">
-                <el-table-column
-                  v-for="{ prop, label } in colConfigs"
-                  :key="prop"
-                  :prop="prop"
-                  :label="label">
-                </el-table-column>
+                <el-table-column property="name" label="菜名" align="center" ></el-table-column>
+                <el-table-column property="price" label="价格" align="center" ></el-table-column>
               </el-table>
               <div class="totalPrice">
                 总价：{{total}}
@@ -50,8 +46,8 @@
             </div>
           </div>
         </div>
-
       </div>
+        <el-button type="danger" size="small" @click="deleteOrder">删除订单</el-button>
     </section>
     <br/>
   </section>
@@ -64,10 +60,6 @@ export default {
     item
   },
   data () {
-    this.colConfigs = [
-      { prop: 'price', label: '价格' },
-      { prop: 'name', label: '菜名' }
-    ]
     return {
       total: 0,
       tableData: [],
@@ -94,8 +86,44 @@ export default {
        for (let index = 0; index <  this.tableData.foods.length; index++) {
         this.total = this.tableData.foods[index].price + this.total;
       }
+    },
+    deleteOrder: function() {
+      var that = this;
+      var myphone = localStorage.getItem('user');
+        
+      this.$confirm("删除此订单, 是否继续?", "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning"
+      })
+        .then(() => {
+          this.$http.put(`/api/deleteMyOrder/${myphone}`).then(
+            function(response) {
+              if (response.ok) {
+                this.$message({
+                  type: "success",
+                  message: "删除订单成功!"
+                });
+                this.total = 0;
+                that.getAll();
+              } else {
+                this.$message({
+                  type: "error",
+                  message: "删除订单失败!"
+                });
+              }
+            }
+          );
+        })
+        .catch(() => {
+          this.$message({
+            type: "info",
+            message: "已取消删除"
+          });
+        });
     }
   },
+
     //页面初始化进来查询数据
   mounted: function() {
     this.getAll();

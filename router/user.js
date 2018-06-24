@@ -138,8 +138,43 @@ router.put("/user/:id", (req, res) => {
     .catch(err => res.json(err));
 });
 
+//管理员删除某用户订单
+router.put("/deleteOrder/:id", (req, res) => {
+  User.findOneAndUpdate(
+    { _id: req.params.id },
+    {
+      $set: {
+        table: "",
+        time: "",
+        foods:[]
+      }
+    },
+    {
+      new: true
+    }
+  )
+    .then(user => res.json(user))
+    .catch(err => res.json(err));
+});
 
-
+//用户删除订单
+router.put("/deleteMyOrder/:phone", (req, res) => {
+  User.findOneAndUpdate(
+    { phone: req.params.phone },
+    {
+      $set: {
+        table: "",
+        time: "",
+        foods:[]
+      }
+    },
+    {
+      new: true
+    }
+  )
+    .then(user => res.json(user))
+    .catch(err => res.json(err));
+});
 //删除一条用户信息路由
 router.delete("/user/:id", (req, res) => {
   User.findOneAndRemove({
@@ -149,7 +184,7 @@ router.delete("/user/:id", (req, res) => {
     .catch(err => res.json(err));
 });
 
-// delete user session
+// 删除 session
 router.get("/delsession", (req, res) => {
   req.session.user = null;
   res.json({

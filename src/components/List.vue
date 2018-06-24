@@ -47,7 +47,8 @@
               <template slot-scope="scope">
                   <el-button  size="small" type="success" @click="checkFood(scope.row['_id'])">查看菜品</el-button>
                   <el-button  size="small" type="success" @click="modify(scope.row)">修改</el-button>
-                  <el-button type="danger" size="small" @click="deleteDate(scope.row['_id'])">删除</el-button>
+                  <el-button type="danger" size="small" @click="deleteOrder(scope.row['_id'])">删除订单</el-button>                  
+                  <el-button type="danger" size="small" @click="deleteDate(scope.row['_id'])">删除用户</el-button>
               </template>
             </el-table-column>
   </el-table>
@@ -205,8 +206,7 @@ export default {
     },
     modifySure: function() {
       var that = this;
-      this.$http
-        .put(`/api/user/${this.modifyId}`, this.modifyForm, {
+      this.$http.put(`/api/user/${this.modifyId}`, this.modifyForm, {
           emulateJSON: true
         })
         .then(
@@ -227,7 +227,7 @@ export default {
           }
         );
     },
-    // 删除操作
+    // 删除用户操作
     deleteDate: function(id) {
       var that = this;
       var deleteId = id;
@@ -243,13 +243,51 @@ export default {
               if (response.ok) {
                 this.$message({
                   type: "success",
-                  message: "删除成功!"
+                  message: "删除用户成功!"
                 });
                 that.getAll();
               } else {
                 this.$message({
                   type: "error",
-                  message: "删除失败!"
+                  message: "删除用户失败!"
+                });
+              }
+            },
+            function() {
+              // this.loading = false;
+            }
+          );
+        })
+        .catch(() => {
+          this.$message({
+            type: "info",
+            message: "已取消删除"
+          });
+        });
+    },
+        // 删除订单操作
+    deleteOrder: function(id) {
+      var that = this;
+      var deleteOrderderId = id;
+
+      this.$confirm("此操作将删除该订单, 是否继续?", "提示", {
+        confirmButtonText: "确定",
+        cancelButtonText: "取消",
+        type: "warning"
+      })
+        .then(() => {
+          this.$http.put(`/api/deleteOrder/${deleteOrderderId}`).then(
+            function(response) {
+              if (response.ok) {
+                this.$message({
+                  type: "success",
+                  message: "删除订单成功!"
+                });
+                that.getAll();
+              } else {
+                this.$message({
+                  type: "error",
+                  message: "删除订单失败!"
                 });
               }
             },
