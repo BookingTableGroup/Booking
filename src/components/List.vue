@@ -31,14 +31,14 @@
 
             <el-table-column
             prop="table"
-            label="桌号"
+            label="桌子大小"
             align="center"
             width="200">
             </el-table-column>
 
             <el-table-column
             prop="time"
-            label="预定时间"
+            label="预订时间"
             align="center"
             width="250">
             </el-table-column>
@@ -71,12 +71,13 @@
     <el-form-item label="桌子大小" :label-width="formLabelWidth">
       <el-select v-model="addForm.table" placeholder="请选择桌号" class="tableArea">
         <el-option label="8人桌" value="8"></el-option>
-        <el-option label="12人桌" value="12"></el-option>
+        <el-option label="10人桌" value="10"></el-option>
+        <el-option label="16人桌" value="16"></el-option>
       </el-select>
     </el-form-item>
 
-    <el-form-item label="预定时间" :label-width="formLabelWidth">
-      <el-select v-model="addForm.time" placeholder="请选择预定时间" class="tableArea">
+    <el-form-item label="预订时间" :label-width="formLabelWidth">
+      <el-select v-model="addForm.time" placeholder="请选择预订时间" class="tableArea">
         <el-option label="11:00-14:00" value="11:00-14:00"></el-option>
         <el-option label="17:00-21:00" value="17:00-21:00"></el-option>
       </el-select>
@@ -105,12 +106,13 @@
     <el-form-item label="桌子大小" :label-width="formLabelWidth">
       <el-select v-model="modifyForm.table" placeholder="请选择桌号" class="sexArea">
         <el-option label="8人桌" value="8"></el-option>
-        <el-option label="12人桌" value="12"></el-option>
+        <el-option label="10人桌" value="10"></el-option>
+        <el-option label="16人桌" value="16"></el-option>
       </el-select>
     </el-form-item>
 
-    <el-form-item label="预定时间" :label-width="formLabelWidth">
-      <el-select v-model="modifyForm.time" placeholder="请选择预定时间" class="tableArea">
+    <el-form-item label="预订时间" :label-width="formLabelWidth">
+      <el-select v-model="modifyForm.time" placeholder="请选择预订时间" class="tableArea">
         <el-option label="11:00-14:00" value="11:00-14:00"></el-option>
         <el-option label="17:00-21:00" value="17:00-21:00"></el-option>
       </el-select>
